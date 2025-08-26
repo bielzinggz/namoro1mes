@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:wght@400;700&display=swap">
+
+    <meta charset="UTF-8">
+    <title>1 Mês com Você 💖</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #fff0f5, #ffc0cb);
+            color: #010101;
+            /* muda a cor do texto pra ficar legível */
+
+            margin: 0;
+            font-family: 'Allura', cursive;
+            text-align: center;
+            padding: 30px;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            color: #d63384;
+            font-size: 3em;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .main-text {
+            font-size: 1.3em;
+            max-width: 700px;
+            margin: 20px auto;
+            transition: opacity 1s;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 30px auto;
+        }
+
+        .gallery img {
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        .quotes {
+            font-family: 'Allura', cursive;
+            margin-top: 40px;
+            font-style: italic;
+            font-size: 1.2em;
+            color: #555;
+            opacity: 0.9;
+        }
+
+        audio {
+            margin-top: 30px;
+        }
+
+        footer {
+            margin-top: 50px;
+            font-size: 0.9em;
+            color: #888;
+        }
+
+        /* Corações caindo */
+        .heart {
+            position: fixed;
+            top: -50px;
+            color: #ff6b81;
+            font-size: 24px;
+            animation: fall 10s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-100px) rotate(0deg);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(120vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>1 Mês com Você 💘</h1>
+
+    <div class="main-text">
+        <p>
+            Hoje celebramos nosso primeiro mês juntos. Um mês que parece pouco no calendário, mas que carrega muito
+            significado no coração.
+        </p>
+
+        <p>
+            Mesmo com a distância entre nós, cada mensagem, cada chamada, cada "bom dia" e "boa noite" me fez sentir
+            você aqui do meu lado. A sua presença, mesmo virtual, mudou completamente a minha rotina. Você se tornou
+            parte dos meus pensamentos, dos meus planos e dos meus sonhos.
+        </p>
+
+        <p>
+            Eu te admiro mais a cada dia — pelo jeito que você sorri, pela paciência, pela leveza que você traz pra
+            minha vida. Nosso amor está só começando, e mesmo separados por quilômetros, estamos unidos por algo que
+            nenhuma distância pode apagar: a conexão que criamos e o sentimento que cresce em silêncio, mas com força.
+        </p>
+
+        <p>
+            Obrigado por me fazer sentir tão especial, tão querido. Por ser abrigo mesmo de longe, por me fazer sorrir
+            mesmo nos dias mais difíceis. Que esse 1º mês seja o primeiro de muitos capítulos lindos que ainda vamos
+            escrever juntos.
+        </p>
+
+        <p>
+            Eu acredito em nós. E mal posso esperar pelo momento em que vou te encontrar, te abraçar e dizer: "valeu a
+            pena esperar por você".
+        </p>
+    </div>
+
+    <div class="gallery">
+        <img src="AMOR.jpg" alt="Foto 1">
+        <img src="minha lindeza.jpg" alt="Foto 2">
+        <img src="primeiramaravilha.jpg" alt="Foto 3">
+        <img src="olhos do meu amor.jpg" alt="Foto 4">
+    </div>
+
+    <div class="quotes">
+        <p>"Mesmo longe, você é meu lar."</p>
+        <p>"O tempo voa quando penso em nós dois."</p>
+        <p>"Você é meu detalhe favorito em todos os meus dias."</p>
+    </div>
+    <div class="gallery">
+        <img src="linda.jpg" alt="Foto 5">
+        <img src="sorrisolindo.jpg" alt="Foto 6">
+        <img src="onça.jpg" alt="Foto 7">
+        <img src="mario.jpg" alt="Foto 8">
+    </div>
+    <div>
+        <h2>🎶 Nossa Música</h2>
+        <audio controls>
+            <source src="Goo Goo Dolls - Iris (Tradução) (Clipe Oficial Legendado) [q3n5z4W4c9Y].mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <div class="gallery">
+        <img src="eu.jpg" alt="Foto 9">
+        <img src="nossosfilhos.jpg" alt="Foto 10">
+        <img src="carinhalinda.jpg" alt="Foto 11">
+        <img src="vestidoazul.jpg" alt="Foto 12">
+    </div>
+    <footer>
+        <p>Feito com carinho para você 💕</p>
+    </footer>
+
+    <!-- Script dos corações -->
+    <script>
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = (Math.random() * 5 + 5) + 's';
+            heart.innerText = '💗';
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 10000);
+        }
+
+        setInterval(createHeart, 400);
+    </script>
+
+</body>
+
+</html>
